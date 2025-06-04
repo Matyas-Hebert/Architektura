@@ -4,7 +4,7 @@
 
 ## Overview
 
-This VHDL design implements a **finite state machine (FSM)** that executes a small custom instruction set.
+This VHDL design implements a **finite state machine (FSM)** that executes a small instruction set (from `brainfuck` exoteric language).
 
 It fetches the memory, decode the instructions and perform the operations.
 
