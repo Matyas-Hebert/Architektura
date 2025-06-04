@@ -46,24 +46,3 @@ The FSM supports these instructions: `@`, `+`, `-`, `[`, `]`, `$`, and `!` to ma
 | `]`         | `0x5D`     | Loop end - jump backward if non-zero |
 | `$`         | `0x24`     | Load input into TMP register        |
 | `!`         | `0x21`     | Store TMP register to memory        |
-
----
-
-## Notes
-
-- This FSM is designed for **positive-edge clock synchronous operation**.  
-- Make sure `OUT_BUSY` and `IN_VLD` signals properly indicate readiness for output and input availability, respectively.  
-- Supports simple memory and I/O with basic loop constructs, ideal for BrainFuck-like interpreter functionality.  
-
----
-
-## Example
-
-```vhdl
--- Example snippet to start execution:
-RESET <= '1';
-wait for 20 ns;
-RESET <= '0';
-EN <= '1';
-
--- Monitor the DONE signal to know when the program has halted.
